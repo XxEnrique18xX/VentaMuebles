@@ -18,8 +18,10 @@ namespace DAL.Empleados
             using (var connection = _conexion)
             {
                 connection.Open();
-                string query = @"SELECT e.IdEmpleado, e.Nombre, e.Cargo, e.Fecha_Contratacion, e.Salario, u.Usuario, u.Contrasenia FROM Empleado e INNER JOIN Usuario u ON e.IdUsuario = u.IdUsuario INNER JOIN Rol r ON u.IdRol = r.IdRol";
+                string query = @"SELECT e.IdEmpleado, e.Nombre, e.Cargo, e.Fecha_Contratacion, e.Salario, u.Usuario, u.Contrasenia FROM Empleado e INNER JOIN Usuario u ON e.IdUsuario = u.IdUsuario INNER JOIN Rol r ON u.IdRol = r.IdRol WHERE e.Estado = 1 AND u.Estado = 1";
                 return connection.Query<dynamic>(query);
+                //1 Visble
+                //0 Oculto
             }
         }
         //Método para agregar Empleados a la base de datos
@@ -90,5 +92,42 @@ namespace DAL.Empleados
                 }
             }
         }
+        //Método para ocultar los datos del dataGridView
+        //Método para ocultar los datos del DataGridView
+        public string Borrar(string idEmpleado)
+        {
+            using (var connection = _conexion)
+            {
+                connection.Open();
+                using (var transaccion = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        // Ocultar el empleado en la tabla Empleado
+                        var sqlEmpleado = "UPDATE Empleado SET Estado = @Estado WHERE IdEmpleado = @IdEmpleado";
+                        connection.Execute(sqlEmpleado, new { IdEmpleado = idEmpleado, Estado = "0" }, transaccion);
+
+                        // Obtener el IdUsuario asociado al IdEmpleado
+                        var sqlUsuarioId = "SELECT IdUsuario FROM Empleado WHERE IdEmpleado = @IdEmpleado";
+                        var idUsuario = connection.QuerySingle<int>(sqlUsuarioId, new { IdEmpleado = idEmpleado }, transaccion);
+
+                        // Ocultar el usuario en la tabla Usuario
+                        var sqlUsuario = "UPDATE Usuario SET Estado= @Estado WHERE IdUsuario = @IdUsuario";
+                        connection.Execute(sqlUsuario, new { IdUsuario = idUsuario, Estado = "0" }, transaccion);
+
+                        // Confirmar la transacción
+                        transaccion.Commit();
+                        return "Empleado y usuario borrados exitosamente";
+                    }
+                    catch (Exception ex)
+                    {
+                        // Si hay un error, revertir la transacción
+                        transaccion.Rollback();
+                        throw;
+                    }
+                }
+            }
+        }
+
     }
 }

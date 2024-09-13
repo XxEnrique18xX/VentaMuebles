@@ -14,5 +14,7 @@ namespace BLL.Empleados
         string NuevosEmpleados(string nombre, string cargo, DateTime fechaContratacion, decimal salario, string usuario, string contrasenia, int idRol);
         //Actualizar los empleados en la base de datos
         string ActualizarEmpleados(int idEmpleado, string nombre, string cargo, DateTime fechaContratacion, decimal salario, string usuario, string contrasenia, int idRol);
+        //Ocultar a los empleados para que no se vean en el dataGrid pero aún se mantengan en el SQL
+        string BorrarEmpleados(string id);
     }
 }

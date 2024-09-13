@@ -51,5 +51,20 @@ namespace BLL.Empleados
             }
             return resutlado;
         }
+        //Método para ocultar a los empleados de el dataGird
+        public string BorrarEmpleados(string id)
+        {
+            string resultado = "";
+            try
+            {
+                _empleadosDAL.Borrar(id);
+                resultado = "Empleado eliminado exitosamente!!";
+            }
+            catch (Exception error)
+            {
+                resultado = error.Message;
+            }
+            return resultado; // Asegúrate de retornar el resultado
+        }
     }
 }

@@ -30,6 +30,7 @@
         {
             dataGridView1 = new DataGridView();
             groupBox1 = new GroupBox();
+            btn_actualizar = new Button();
             lbl_id = new Label();
             label8 = new Label();
             btn_guardar = new Button();
@@ -46,7 +47,7 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            btn_actualizar = new Button();
+            btn_Eliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -63,6 +64,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btn_Eliminar);
             groupBox1.Controls.Add(btn_actualizar);
             groupBox1.Controls.Add(lbl_id);
             groupBox1.Controls.Add(label8);
@@ -86,6 +88,16 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // btn_actualizar
+            // 
+            btn_actualizar.Location = new Point(145, 667);
+            btn_actualizar.Name = "btn_actualizar";
+            btn_actualizar.Size = new Size(112, 34);
+            btn_actualizar.TabIndex = 19;
+            btn_actualizar.Text = "Actualizar";
+            btn_actualizar.UseVisualStyleBackColor = true;
+            btn_actualizar.Click += btn_actualizar_Click_1;
             // 
             // lbl_id
             // 
@@ -220,15 +232,15 @@
             label1.TabIndex = 0;
             label1.Text = "Nombre";
             // 
-            // btn_actualizar
+            // btn_Eliminar
             // 
-            btn_actualizar.Location = new Point(145, 667);
-            btn_actualizar.Name = "btn_actualizar";
-            btn_actualizar.Size = new Size(112, 34);
-            btn_actualizar.TabIndex = 19;
-            btn_actualizar.Text = "Actualizar";
-            btn_actualizar.UseVisualStyleBackColor = true;
-            btn_actualizar.Click += btn_actualizar_Click_1;
+            btn_Eliminar.Location = new Point(281, 667);
+            btn_Eliminar.Name = "btn_Eliminar";
+            btn_Eliminar.Size = new Size(112, 34);
+            btn_Eliminar.TabIndex = 20;
+            btn_Eliminar.Text = "Eliminar";
+            btn_Eliminar.UseVisualStyleBackColor = true;
+            btn_Eliminar.Click += btn_Eliminar_Click;
             // 
             // CRUD_Empleados
             // 
@@ -267,5 +279,6 @@
         private Label lbl_id;
         private Label label8;
         private Button btn_actualizar;
+        private Button btn_Eliminar;
     }
 }

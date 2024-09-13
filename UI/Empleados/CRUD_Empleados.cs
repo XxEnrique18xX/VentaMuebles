@@ -148,5 +148,15 @@ namespace UI.Empleados
             MessageBox.Show(resultado);
             ListarEmpleados(); // Actualiza el DataGridView
         }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            var logica = new ServiceEmpleados();
+            string resultado;
+
+            resultado = logica.BorrarEmpleados(lbl_id.Text);
+            MessageBox.Show(resultado);
+            ListarEmpleados(); // Actualiza el DataGridView
+        }
     }
 }

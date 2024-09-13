@@ -14,5 +14,7 @@ namespace DAL.Empleados
         void AgregarEmpleados(string nombre, string cargo, DateTime fechaContratacion, decimal salario, string usuario, string contrasenia, int idRol);
         //Actualizar los empleados en la base de datos
         string ActualizarEmpleados(int idEmpleado, string nombre, string cargo, DateTime fechaContratacion, decimal salario, string usuario, string contrasenia, int idRol);
+        //Método para ocultar los datos del dataGridView
+        string Borrar(string id);
     }
 }
