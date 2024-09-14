@@ -158,5 +158,6 @@ namespace UI.Empleados
             MessageBox.Show(resultado);
             ListarEmpleados(); // Actualiza el DataGridView
         }
+
     }
 }

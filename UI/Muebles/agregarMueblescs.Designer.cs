@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            btn_categoria = new ComboBox();
+            cmb_categoria = new ComboBox();
             label2 = new Label();
             txt_descripcion = new TextBox();
             label3 = new Label();
@@ -58,13 +58,13 @@
             label1.TabIndex = 0;
             label1.Text = "Caategoría";
             // 
-            // btn_categoria
+            // cmb_categoria
             // 
-            btn_categoria.FormattingEnabled = true;
-            btn_categoria.Location = new Point(319, 23);
-            btn_categoria.Name = "btn_categoria";
-            btn_categoria.Size = new Size(237, 33);
-            btn_categoria.TabIndex = 1;
+            cmb_categoria.FormattingEnabled = true;
+            cmb_categoria.Location = new Point(319, 23);
+            cmb_categoria.Name = "cmb_categoria";
+            cmb_categoria.Size = new Size(237, 33);
+            cmb_categoria.TabIndex = 1;
             // 
             // label2
             // 
@@ -80,7 +80,7 @@
             txt_descripcion.Location = new Point(319, 98);
             txt_descripcion.Multiline = true;
             txt_descripcion.Name = "txt_descripcion";
-            txt_descripcion.Size = new Size(292, 99);
+            txt_descripcion.Size = new Size(237, 99);
             txt_descripcion.TabIndex = 3;
             // 
             // label3
@@ -197,7 +197,7 @@
             // 
             // btn_agregar
             // 
-            btn_agregar.Location = new Point(704, 35);
+            btn_agregar.Location = new Point(718, 39);
             btn_agregar.Name = "btn_agregar";
             btn_agregar.Size = new Size(112, 34);
             btn_agregar.TabIndex = 18;
@@ -208,7 +208,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(979, 796);
+            ClientSize = new Size(896, 796);
             Controls.Add(btn_agregar);
             Controls.Add(txt_tiempoGarantia);
             Controls.Add(txt_existenciaMinima);
@@ -226,7 +226,7 @@
             Controls.Add(label3);
             Controls.Add(txt_descripcion);
             Controls.Add(label2);
-            Controls.Add(btn_categoria);
+            Controls.Add(cmb_categoria);
             Controls.Add(label1);
             Name = "agregarMueblescs";
             Text = "agregarMueblescs";
@@ -238,7 +238,7 @@
         #endregion
 
         private Label label1;
-        private ComboBox btn_categoria;
+        private ComboBox cmb_categoria;
         private Label label2;
         private TextBox txt_descripcion;
         private Label label3;

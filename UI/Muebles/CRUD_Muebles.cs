@@ -15,12 +15,12 @@ namespace UI.Muebles
             // Agregar el menú de opciones al combo box
             cmb_opciones.Items.Add("Todas");
             cmb_opciones.Items.Add("Sofás");
-            cmb_opciones.Items.Add("Mesas de comedor");
+            cmb_opciones.Items.Add("Mesas");
             cmb_opciones.Items.Add("Sillas");
             cmb_opciones.Items.Add("Camas");
             cmb_opciones.Items.Add("Escritorios");
             cmb_opciones.Items.Add("Estanterías");
-            cmb_opciones.Items.Add("Muebles de almacenamiento");
+            cmb_opciones.Items.Add("Muebles");
             cmb_opciones.SelectedIndex = 0;
         }
 
@@ -55,7 +55,7 @@ namespace UI.Muebles
                 case "Sofás":
                     idCategoria = 1;
                     break;
-                case "Mesas de comedor":
+                case "Mesas":
                     idCategoria = 2;
                     break;
                 case "Sillas":
@@ -70,7 +70,7 @@ namespace UI.Muebles
                 case "Estanterías":
                     idCategoria = 6;
                     break;
-                case "Muebles de almacenamiento":
+                case "Muebles":
                     idCategoria = 7;
                     break;
                 default:

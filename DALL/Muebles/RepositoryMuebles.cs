@@ -12,7 +12,7 @@ namespace DAL.Muebles
 {
     public class RepositoryMuebles
     {
-        private readonly IDbConnection _conexion = new Conexion().Cadena(); // Asumiendo que `Conexion` es una clase que manejas
+        private readonly IDbConnection _conexion = new Conexion().Cadena(); // Asumiendo que Conexion es una clase que manejas
 
         public IEnumerable<dynamic> GetMuebles(int idCategoria)
         {
