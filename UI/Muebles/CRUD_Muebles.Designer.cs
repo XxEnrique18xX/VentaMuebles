@@ -59,12 +59,13 @@
             cmb_opciones.FormattingEnabled = true;
             cmb_opciones.Location = new Point(188, 23);
             cmb_opciones.Name = "cmb_opciones";
-            cmb_opciones.Size = new Size(182, 33);
+            cmb_opciones.Size = new Size(227, 33);
             cmb_opciones.TabIndex = 2;
+            cmb_opciones.SelectedIndexChanged += cmb_opciones_SelectedIndexChanged;
             // 
             // btn_listar
             // 
-            btn_listar.Location = new Point(418, 22);
+            btn_listar.Location = new Point(516, 22);
             btn_listar.Name = "btn_listar";
             btn_listar.Size = new Size(112, 34);
             btn_listar.TabIndex = 3;
@@ -74,12 +75,13 @@
             // 
             // btn_Agregar
             // 
-            btn_Agregar.Location = new Point(559, 22);
+            btn_Agregar.Location = new Point(662, 21);
             btn_Agregar.Name = "btn_Agregar";
             btn_Agregar.Size = new Size(112, 34);
             btn_Agregar.TabIndex = 4;
             btn_Agregar.Text = "Agregar";
             btn_Agregar.UseVisualStyleBackColor = true;
+            btn_Agregar.Click += btn_Agregar_Click;
             // 
             // CRUD_Muebles
             // 

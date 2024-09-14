@@ -82,6 +82,18 @@ namespace UI.Muebles
             dataGridView1.DataSource = datos;
             dataGridView1.Refresh();
         }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            agregarMueblescs siguiente = new agregarMueblescs();
+            siguiente.Show();
+            this.Hide();
+        }
+
+        private void cmb_opciones_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
