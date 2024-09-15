@@ -10,5 +10,9 @@ namespace BLL.Muebles
     {
         // Listar Muebles filtrados por IdCategoria
         IEnumerable<dynamic> ListarMuebles(int idCategoria);
+        //Agregar nuevo método
+        string NuevoMueble(string categoria, int precioVenta, float porcentajeDescuento, string marca, string modelo, int existenciaStock, int existenciaMinima, int tiempoGarantia, int idCategoria);
+        //Ocultar a los muebles para que no se vean en el dataGrid pero aún se mantengan en el SQL
+        string BorrarMuebles(string id);
     }
 }

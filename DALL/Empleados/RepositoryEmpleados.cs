@@ -92,7 +92,6 @@ namespace DAL.Empleados
                 }
             }
         }
-        //Método para ocultar los datos del dataGridView
         //Método para ocultar los datos del DataGridView
         public string Borrar(string idEmpleado)
         {

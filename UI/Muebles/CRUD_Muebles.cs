@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using BLL.Empleados;
 using BLL.Muebles;
 using DAL;
 
@@ -87,12 +88,28 @@ namespace UI.Muebles
         {
             agregarMueblescs siguiente = new agregarMueblescs();
             siguiente.Show();
-            this.Hide();
         }
 
         private void cmb_opciones_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            var logica = new ServiceMuebles();
+            string resultado;
+            resultado = logica.BorrarMuebles(txt_id.Text);
+            MessageBox.Show(resultado);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Trasladar el contenido de cada texto hacia las cajas de texto
+            if (e.RowIndex >= 0)
+            {
+                txt_id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
         }
     }
 }

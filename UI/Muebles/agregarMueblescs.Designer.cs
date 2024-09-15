@@ -47,6 +47,8 @@
             txt_existenciaMinima = new TextBox();
             txt_tiempoGarantia = new TextBox();
             btn_agregar = new Button();
+            label10 = new Label();
+            txt_id = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -197,18 +199,37 @@
             // 
             // btn_agregar
             // 
-            btn_agregar.Location = new Point(718, 39);
+            btn_agregar.Location = new Point(722, 140);
             btn_agregar.Name = "btn_agregar";
             btn_agregar.Size = new Size(112, 34);
             btn_agregar.TabIndex = 18;
             btn_agregar.Text = "Agregar";
             btn_agregar.UseVisualStyleBackColor = true;
+            btn_agregar.Click += btn_agregar_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(682, 31);
+            label10.Name = "label10";
+            label10.Size = new Size(34, 25);
+            label10.TabIndex = 19;
+            label10.Text = "ID:";
+            // 
+            // txt_id
+            // 
+            txt_id.Location = new Point(734, 25);
+            txt_id.Name = "txt_id";
+            txt_id.Size = new Size(100, 31);
+            txt_id.TabIndex = 20;
             // 
             // agregarMueblescs
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(896, 796);
+            Controls.Add(txt_id);
+            Controls.Add(label10);
             Controls.Add(btn_agregar);
             Controls.Add(txt_tiempoGarantia);
             Controls.Add(txt_existenciaMinima);
@@ -256,5 +277,7 @@
         private TextBox txt_existenciaMinima;
         private TextBox txt_tiempoGarantia;
         private Button btn_agregar;
+        private Label label10;
+        private TextBox txt_id;
     }
 }

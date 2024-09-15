@@ -33,6 +33,9 @@
             cmb_opciones = new ComboBox();
             btn_listar = new Button();
             btn_Agregar = new Button();
+            btn_eliminar = new Button();
+            label1 = new Label();
+            txt_id = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -44,6 +47,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1526, 592);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // lbl_categoria
             // 
@@ -83,11 +87,40 @@
             btn_Agregar.UseVisualStyleBackColor = true;
             btn_Agregar.Click += btn_Agregar_Click;
             // 
+            // btn_eliminar
+            // 
+            btn_eliminar.Location = new Point(795, 23);
+            btn_eliminar.Name = "btn_eliminar";
+            btn_eliminar.Size = new Size(112, 34);
+            btn_eliminar.TabIndex = 5;
+            btn_eliminar.Text = "Elimiar";
+            btn_eliminar.UseVisualStyleBackColor = true;
+            btn_eliminar.Click += btn_eliminar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(1207, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 25);
+            label1.TabIndex = 6;
+            label1.Text = "label1";
+            // 
+            // txt_id
+            // 
+            txt_id.Location = new Point(1272, 27);
+            txt_id.Name = "txt_id";
+            txt_id.Size = new Size(91, 31);
+            txt_id.TabIndex = 7;
+            // 
             // CRUD_Muebles
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1572, 718);
+            Controls.Add(txt_id);
+            Controls.Add(label1);
+            Controls.Add(btn_eliminar);
             Controls.Add(btn_Agregar);
             Controls.Add(btn_listar);
             Controls.Add(cmb_opciones);
@@ -108,5 +141,8 @@
         private ComboBox cmb_opciones;
         private Button btn_listar;
         private Button btn_Agregar;
+        private Button btn_eliminar;
+        private Label label1;
+        private TextBox txt_id;
     }
 }
