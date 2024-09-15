@@ -86,7 +86,7 @@ namespace UI.Muebles
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
-            agregarMueblescs siguiente = new agregarMueblescs();
+            agregarMuebles siguiente = new agregarMuebles();
             siguiente.Show();
         }
 
@@ -109,6 +109,40 @@ namespace UI.Muebles
             if (e.RowIndex >= 0)
             {
                 txt_id.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+        }
+
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            agregarMuebles agregar = new agregarMuebles();
+            agregar.Show();
+        }
+
+        private void dataGridView1_ColumnDividerDoubleClick(object sender, DataGridViewColumnDividerDoubleClickEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Crea una instancia del formulario agregarMuebles
+                agregarMuebles agregar = new agregarMuebles();
+
+                // Enviar los valores al forms agregarMuebles
+                agregar.Id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                agregar.Categoria = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+                agregar.Descripcion = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                agregar.precioVenta = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                agregar.porcentajeDescuento = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                agregar.marca = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                agregar.modelo = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                agregar.existenciaStock = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                agregar.existenciaMinima = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                agregar.tiempoGarantia = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                agregar.Show();
             }
         }
     }

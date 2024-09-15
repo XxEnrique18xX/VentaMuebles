@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Muebles;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
-namespace DAL.Muebles
+namespace DAL.Muebles   
 {
     public class RepositoryMuebles : IRepositoryMuebles
     {
@@ -30,7 +31,6 @@ namespace DAL.Muebles
                 }
             }
         }
-
         //Agregar nuevos muebles a la base de datos
         public void agregarMuebles(string categoria, int precioVenta, float porcentajeDescuento, string marca, string modelo, int existenciaStock, int existenciaMinima, int tiempoGarantia, int idCategoria)
         {

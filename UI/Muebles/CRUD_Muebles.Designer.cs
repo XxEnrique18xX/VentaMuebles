@@ -48,6 +48,8 @@
             dataGridView1.Size = new Size(1526, 592);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            dataGridView1.ColumnDividerDoubleClick += dataGridView1_ColumnDividerDoubleClick;
             // 
             // lbl_categoria
             // 

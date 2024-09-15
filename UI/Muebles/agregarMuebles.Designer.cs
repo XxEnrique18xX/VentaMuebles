@@ -1,6 +1,6 @@
 ﻿namespace UI.Muebles
 {
-    partial class agregarMueblescs
+    partial class agregarMuebles
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,7 @@
             btn_agregar = new Button();
             label10 = new Label();
             txt_id = new TextBox();
+            btn_actualizar = new Button();
             SuspendLayout();
             // 
             // label1
@@ -63,7 +64,7 @@
             // cmb_categoria
             // 
             cmb_categoria.FormattingEnabled = true;
-            cmb_categoria.Location = new Point(319, 23);
+            cmb_categoria.Location = new Point(332, 31);
             cmb_categoria.Name = "cmb_categoria";
             cmb_categoria.Size = new Size(237, 33);
             cmb_categoria.TabIndex = 1;
@@ -223,11 +224,22 @@
             txt_id.Size = new Size(100, 31);
             txt_id.TabIndex = 20;
             // 
-            // agregarMueblescs
+            // btn_actualizar
+            // 
+            btn_actualizar.Location = new Point(722, 204);
+            btn_actualizar.Name = "btn_actualizar";
+            btn_actualizar.Size = new Size(112, 34);
+            btn_actualizar.TabIndex = 21;
+            btn_actualizar.Text = "Actualizar";
+            btn_actualizar.UseVisualStyleBackColor = true;
+            btn_actualizar.Click += btn_actualizar_Click;
+            // 
+            // agregarMuebles
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(896, 796);
+            Controls.Add(btn_actualizar);
             Controls.Add(txt_id);
             Controls.Add(label10);
             Controls.Add(btn_agregar);
@@ -249,7 +261,7 @@
             Controls.Add(label2);
             Controls.Add(cmb_categoria);
             Controls.Add(label1);
-            Name = "agregarMueblescs";
+            Name = "agregarMuebles";
             Text = "agregarMueblescs";
             Load += agregarMueblescs_Load;
             ResumeLayout(false);
@@ -279,5 +291,6 @@
         private Button btn_agregar;
         private Label label10;
         private TextBox txt_id;
+        private Button btn_actualizar;
     }
 }
