@@ -8,8 +8,9 @@ namespace BLL.Empleados
 {
     internal interface IServiceEmpleados
     {
-        //Lista todos los Empleados de la base de datos.
+        //Lista todos los Empleados de la base de datos
         IEnumerable<dynamic> ListarEmpleados();
+        //Agregar a nuevos Empleados a la base de datos
         string NuevosEmpleados(string nombre, string cargo, DateTime fechaContratacion, decimal salario, string usuario, string contrasenia, int idRol);
         //Actualizar los empleados en la base de datos
         string ActualizarEmpleados(int idEmpleado, string nombre, string cargo, DateTime fechaContratacion, decimal salario, string usuario, string contrasenia, int idRol);
