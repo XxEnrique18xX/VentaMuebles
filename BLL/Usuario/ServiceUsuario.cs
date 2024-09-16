@@ -10,6 +10,14 @@ namespace BLL.Usuario
     public class ServiceUsuario : IServiceUsuario
     {
         private readonly RepositoryUsuario _usuariosDAL = new RepositoryUsuario();
+        public IEnumerable<dynamic> ListarUsuario()
+        {
+            return _usuariosDAL.GetUsuarios();
+        }
+        public int GetRol(string idUsuario)
+        {
+            return _usuariosDAL.GetRol(idUsuario);
+        }
 
         public string AgregarUsuario(string username, string password, int rol, string estado)
         {

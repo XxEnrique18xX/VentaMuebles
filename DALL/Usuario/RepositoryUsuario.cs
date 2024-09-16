@@ -11,6 +11,25 @@ namespace DAL.Usuario
     public class RepositoryUsuario : IRepositoryUsuario
     {
         private readonly IDbConnection _conexion = new Conexion().Cadena();
+        public IEnumerable<dynamic> GetUsuarios()
+        {
+            using (var connection = _conexion)
+            {
+                connection.Open();
+                return connection.Query<dynamic>("SELECT Usuario,IdRol,Estado FROM Usuario WHERE Usuario.Estado = 1");
+            }
+        }
+        public int GetRol(string idUsuario)
+        {
+            using (var connection = _conexion)
+            {
+                connection.Open();
+                string query = "SELECT IdRol FROM Usuario WHERE Usuario = @IdUsuario";
+                return connection.QueryFirstOrDefault <int>(query, new {IdUsuario = idUsuario});
+
+            }
+        }
+       
         public IEnumerable<dynamic> BuscarUsuario(string username, string password)
         {
             using (var connection = _conexion)
