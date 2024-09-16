@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Usuario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,12 +11,12 @@ namespace BLL.Usuario
     {
         private readonly RepositoryUsuario _usuariosDAL = new RepositoryUsuario();
 
-        public string AgregarUsuario(string username, string password, int rol)
+        public string AgregarUsuario(string username, string password, int rol, string estado)
         {
             string resultado = "";
             try
             {
-                resultado = _usuariosDAL.AgregarUsuario(username, password, rol);
+                resultado = _usuariosDAL.AgregarUsuario(username, password, rol,estado);
             }
             catch (Exception error)
             {

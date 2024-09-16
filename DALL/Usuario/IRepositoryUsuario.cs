@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Usuario
+namespace DAL.Usuario
 {
-    internal interface IServiceUsuario
+    internal interface IRepositoryUsuario
     {
         IEnumerable<dynamic> BuscarUsuario(string username, string password);
         string AgregarUsuario(string username, string password, int rol, string estado);
