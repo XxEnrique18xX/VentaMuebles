@@ -8,7 +8,7 @@ namespace BLL.Empleados
 {
     internal interface IServiceEmpleados
     {
-        //Lista todos los Empleados de la base de datos
+        //Lista todos los Empleados de la base de datos.
         IEnumerable<dynamic> ListarEmpleados();
     }
 }
